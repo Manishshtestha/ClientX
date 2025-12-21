@@ -1,4 +1,8 @@
+import 'package:clientx/screens/admin/admin_analytics.dart';
+import 'package:clientx/screens/admin/admin_clients.dart';
 import 'package:clientx/screens/admin/admin_homepage.dart';
+import 'package:clientx/screens/admin/admin_notifications.dart';
+import 'package:clientx/screens/admin/admin_projects.dart';
 import 'package:flutter/material.dart';
 
 class AdminBottomNav extends StatefulWidget {
@@ -11,12 +15,12 @@ class AdminBottomNav extends StatefulWidget {
 class _AdminBottomNavState extends State<AdminBottomNav> {
   int _currentIndex = 0;
   final List<Widget> _pages = [
-    Center(child: AdminHomePage()),
-    Center(child: Text('Analytics')),
-    Center(child: Text('Clients')),
+    AdminHomePage(),
+    AdminAnalytics(),
+    AdminClients(),
     // Center(child: Text('Tasks')),
-    Center(child: Text('Projects')),
-    Center(child: Text('Notifications')),
+    AdminProjects(),
+    AdminNotifications(),
   ];
 
   @override
